@@ -15,7 +15,7 @@
 <body onload="render()">
   <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
-      <a class="navbar-brand" href="#">Trang quản trị</a>
+      <a class="navbar-brand" href="#">Admin</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,18 +23,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="{{route('products.index')}}">Sản phẩm</a>
+            <a class="nav-link" href="{{route('products.index')}}">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('customers.index')}}">Khách hàng</a>
+            <a class="nav-link" href="{{route('customers.index')}}">Customer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./oders.html">Đơn hàng</a>
+            <a class="nav-link" href="./oders.html">Invoices</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./user.html">Tài khoản</a>
-          </li>
-
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
@@ -43,8 +39,11 @@
               <i class='bx bxs-user'></i> Xin chào, Admin!
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#"><i class='bx bxs-user-circle'></i> Thông tin cá nhân</a></li>
-              <li><a class="dropdown-item" href="/DualeoX-DucPhong/login.html"><i class='bx bxs-user-x'></i> Logout</a></li>
+             <form method="post" action="{{route('logout')}}">
+                @csrf
+                <li><a class="dropdown-item" href="#"><i class='bx bxs-user-circle'></i> Thông tin cá nhân</a></li>
+                <li><button class="dropdown-item" type="submit" style="color: aliceblue">logout</button></li>
+             </form>
 
             </ul>
           </li>

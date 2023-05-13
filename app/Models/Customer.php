@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     use HasFactory;
+
+    public function scopeSearch($query){
+        if($key = request()->key){
+            $query = $query->where('name', 'like','%'.$key.'%');
+        }
+        return $query;
+    }
 }

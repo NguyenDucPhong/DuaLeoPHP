@@ -1,6 +1,7 @@
 @extends('admin');
 
 @section('content2')
+
 @if($errors->any())
 
 <div class="alert alert-danger">
@@ -80,12 +81,14 @@
           </div>
         </div>
         <div class="col-md-4 ms-auto">
-          <div class="input-group ">
-            <input type="text" class="form-control" placeholder="Tìm kiếm"
-              aria-label="Dollar amount (with dot and two decimal places)">
-            <span class="input-group-text" style="background-color: #80BB35; color:#FFFF"><i
-                class='bx bx-search'></i></span>
-          </div>
+          <form method="" action="" class="form-inline my-2 my-lg-0">
+            <div class="input-group">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" value="" aria-label="Search" name="key">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </div>
+          </form>
         </div>
 
 

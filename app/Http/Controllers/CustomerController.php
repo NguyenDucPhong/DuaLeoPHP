@@ -10,11 +10,12 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data = Customer::latest()->paginate(8);
+        $data = Customer::latest()->search()->paginate(8);
 
         return view('customer', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+    
     }
 
     /**
@@ -43,8 +44,10 @@ class CustomerController extends Controller
         $customer->gender = $request->gender;
         $customer->address = $request->address;
         $customer->phone = $request->phone;
-
         $customer->save();
+
+        // $customer = $request->all();
+        // Customer::create($customer);
 
         return redirect()->route('customers.index')->with('success', 'Customer Added Successfully');
     }

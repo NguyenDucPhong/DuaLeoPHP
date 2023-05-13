@@ -41,7 +41,7 @@
                     <div class="col-3 ">
                         <ul class="list-inline d-flex gap-2 justify-content-end">
                             <li>
-                                <a href="./login.html">
+                                <a href="{{route('login')}}">
                                     <i class='bx bxs-user'></i>
                                     Đăng nhập
                                 </a>
