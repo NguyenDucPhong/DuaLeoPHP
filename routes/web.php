@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductAdController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 
 
@@ -22,7 +24,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('guest',ProductController::class);
+Route::get('test', function () {
+    return view('test');
+});
+
+Route::get('/register', [RegisterController::class, 'show'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
+
+
+Route::resource('guests',ProductController::class);
 
 
 Route::get('/login', function () {
@@ -65,4 +76,6 @@ Route::post('/logout', function () {
 
     return redirect('/login');
 })->name('logout');
+Route::resource('invoices', InvoiceController::class);
+Route::get('invoices/{invoice}/details', 'InvoiceController@details')->name('invoices.details');
 

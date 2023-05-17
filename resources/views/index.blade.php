@@ -105,151 +105,25 @@
                         <div class="list-card">
                                 <div class="row text-center ">
                                     <div class="owl-carousel owl-theme" id="list-fruit">
-                                        <div class="col-3 ">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="./details.html" title="Chanh dây đỏ Úc">
-                                                    <img src="./images/ChanhDayDoUc.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Chanh dây đỏ Úc</p>
-                                                </a>
-                                                
-                                                <div class="card-body d-flex justify-content-around">
+                                       @if (count($data)>0)
+                                           @foreach ($data as $row)
+                                            <div class="col-3">
+                                                <div class="card" style="width: 12rem;">
+                                                    <a href="{{route('guests.show', $row->id)}}" title="Táo Queen New Zealand"><img src="{{asset('images/'.$row->image)}}" class="card-img-top" alt="...">
+                                                        <p class="card-text">{{$row->name}}</p></a>
+                                                    <div class="card-body">
                                                     
-                                                    <div class="special-price">
-                                                        <span>400.000₫</span>
+                                                        <span>{{$row->price}}₫</span>
                                                     </div>
-                                                    <div class="old-price">
-                                                        460.000₫
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="discount">-13%</div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail" data-bs-toggle="modal" data-bs-target="#chanhday"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Dưa leo Đà Lạt">
-                                                    <img src="./images/DuaLeoDaLat.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Dưa leo Đà Lạt</p>
-                                                </a>
-                                                <div class="card-body">
-                                                    
-                                                    <span>65.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#dualeo"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Hành tây"><img src="./images/HanhTay.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Hành tây</p></a>
-                                                
-                                                <div class="card-body">
-                                                  
-                                                    <span>50.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#hanhtay"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Hồng đỏ Mỹ"> <img src="./images/HongDoMy.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Hồng đỏ Mỹ</p></a>
-                                                
-                                                <div class="card-body">
-                                                   
-                                                    <span>150.000₫</span>
-                                                </div>
-                                                
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#hong"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Nho Đà Lạt"><img src="./images/NhoDaLat.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Nho Đà Lạt</p></a>
-                                               
-                                                <div class="card-body">
-                                                   
-                                                    <span>400.000₫</span>
-                                                    
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#nho"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Quả kiwi xanh"><img src="./images/QuaKiwiXanh.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Quả Kiwi xanh</p></a>
-                                          
-                                                <div class="card-body">
-                                                    
-                                                    <span>250.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#kiwi"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Táo đỏ Mỹ"><img src="./images/TaoDoMy.webp" class="card-img-top" alt="...">
-                                                 <p class="card-text">Táo đỏ Mỹ</p>
-                                                </a>
-                                                <div class="card-body d-flex justify-content-around">
-                                                    <div class="special-price">
-                                                        <span>120.000₫</span>
-                                                    </div>
-                                                    <div class="old-price">
-                                                        180.000₫
+                                                    <div class="over-lay"></div>
+                                                    <div class="add text-center">
+                                                        <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
+                                                        <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#taoqueen"><i class='bx bx-show'></i></a>
                                                     </div>
                                                 </div>
-                                                <div class="discount">-33%</div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#taodo"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Táo Queen New Zealand"><img src="./images/TaoQueen.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Táo New Zealand</p></a>
-                                                <div class="card-body">
-                                                   
-                                                    <span>150.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#taoqueen"><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            </div> 
+                                         @endforeach
+                                       @endif
                                     </div>
                                     </div>
                         </div>
@@ -288,144 +162,28 @@
                         <div class="list-card">
                                 <div class="row text-center ">
                                     <div class="owl-carousel owl-theme" id="list-vegetable">
-                                        <div class="col-3 ">
+                                       
+                                        @if (count($data)>0)
+                                        @foreach ($data as $row)
+                                        <div class="col-3">
                                             <div class="card" style="width: 12rem;">
-                                                <a href="./details.html" title="Chanh dây đỏ Úc">
-                                                    <img src="./images/ChanhDayDoUc.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Chanh dây đỏ Úc</p>
-                                                </a>
+                                                <a href="{{route('guests.show', $row->id)}}" ><img src="{{asset('images/'.$row->image)}}" class="card-img-top" alt="...">
+                                                    <p class="card-text">{{$row->name}}</p></a>
+                                                <div class="card-body">
                                                 
-                                                <div class="card-body d-flex justify-content-around">
-                                                    
-                                                    <div class="special-price">
-                                                        <span>400.000₫</span>
-                                                    </div>
-                                                    <div class="old-price">
-                                                        460.000₫
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="discount">-13%</div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Dưa leo Đà Lạt">
-                                                    <img src="./images/DuaLeoDaLat.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Dưa leo Đà Lạt</p>
-                                                </a>
-                                                <div class="card-body">
-                                                    
-                                                    <span>65.000₫</span>
+                                                    <span>{{$row->price}}₫</span>
                                                 </div>
                                                 <div class="over-lay"></div>
                                                 <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
+                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
+                                                    <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#taoqueen"><i class='bx bx-show'></i></a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Hành tây"><img src="./images/HanhTay.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Hành tây</p></a>
-                                                <div class="card-body">
-                                                    
-                                                    <span>50.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Hồng đỏ Mỹ"> <img src="./images/HongDoMy.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Hồng đỏ Mỹ</p></a>
-                                                <div class="card-body">
-                                                    
-                                                    <span>150.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Nho Đà Lạt"><img src="./images/NhoDaLat.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Nho Đà Lạt</p></a>
-                                                <div class="card-body">
-                                                    
-                                                    <span>400.000₫</span>
-                                                    
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Quả kiwi xanh"><img src="./images/QuaKiwiXanh.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Quả Kiwi xanh</p></a>
-                                                <div class="card-body">
-                                                   
-                                                    <span>250.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Táo đỏ Mỹ"><img src="./images/TaoDoMy.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Táo đỏ Mỹ</p></a>
-                                                    <div class="card-body d-flex justify-content-around">
-                                                        <div class="special-price">
-                                                            <span>120.000₫</span>
-                                                        </div>
-                                                        <div class="old-price">
-                                                            180.000₫
-                                                        </div>
-                                                    </div>
-                                                    <div class="discount">-33%</div>
-                                                    <div class="over-lay"></div>
-                                                    <div class="add text-center">
-                                                        <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                        <a href=""><i class='bx bx-show'></i></a>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card" style="width: 12rem;">
-                                                <a href="" title="Táo Queen New Zealand"><img src="./images/TaoQueen.webp" class="card-img-top" alt="...">
-                                                    <p class="card-text">Táo Queen New Zealand</p></a>
-                                                <div class="card-body">
-                                                    
-                                                    <span>150.000₫</span>
-                                                </div>
-                                                <div class="over-lay"></div>
-                                                <div class="add text-center">
-                                                    <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
-                                                    <a href=""><i class='bx bx-show'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div> 
+                                      @endforeach
+                                    @endif
+                                      
+                                        
                                     </div>
                                     </div>
                         </div>
@@ -473,7 +231,7 @@
                                            @foreach ($data as $row)
                                                 <div class="col-xs-6 col-xss-6 col-sm-4 col-md-4 col-lg-3">
                                                     <div class="card" style="width: 13rem;">
-                                                        <a href="" title="Táo Queen New Zealand"><img src="{{asset('images/'.$row->image)}}" class="card-img-top" alt="...">
+                                                        <a href="{{route('guests.show', $row->id)}}" title="Táo Queen New Zealand"><img src="{{asset('images/'.$row->image)}}" class="card-img-top" alt="...">
                                                             <p class="card-text">{{$row->name}}</p></a>
                                                         <div class="card-body">
                                                         

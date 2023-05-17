@@ -6,12 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DualeoX - Giao diện bán hàng tốt nhất Haravan</title>
-    <link rel="stylesheet" href="{{ mix('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
-    ">
+
 </head>
 
 <body>
@@ -50,7 +48,7 @@
                                 <span>Hoặc</span>
                             </li>
                             <li>
-                                <a href="./signUp.html">
+                                <a href="{{route('register')}}">
                                     Đăng ký
                                 </a>
                             </li>
@@ -83,7 +81,7 @@
                           </button>
                     </div>
                     <div class="col-auto col-md-8 col-lg-3  p-0 logo">
-                        <a href=""><img src="./images/logo.png" alt=""></a>
+                        <a href="{{route('guests.index')}}"><img src="{{asset('images/logo.png')}}" alt=""></a>
                     </div>
                     <div class="icon-cart-mobile col-auto col-md-2">
                         <a href="./cart.html"><i class='bx bxs-shopping-bag'></i></a>
@@ -91,7 +89,7 @@
                     <div class="col-xs-12 col-md-12 col-lg-7 policy">
                         <div class="policy d-flex justify-content-around">
                             <div class="item-polyci d-flex align-items-center">
-                                <img src="./images/van_chuyen.png" alt="">
+                                <img src="{{asset('images/van_chuyen.png')}}" alt="">
                                 <div class="">
                                     <a href="">Miễn phí vận chuyển</a>
                                     <p>Bán kính 100 km</p>
@@ -99,7 +97,7 @@
                             </div>
                             <div class="policy d-flex justify-content-center">
                                 <div class="item-polyci d-flex align-items-center">
-                                    <img src="./images/ho_tro.png" alt="">
+                                    <img src="{{asset('images/ho_tro.png')}}" alt="">
                                     <div class="">
                                         <a href="">Hỗ trợ 24/7</a>
                                         <p>Hotline: 19001009</p>
@@ -109,7 +107,7 @@
                             </div>
                             <div class="policy d-flex justify-content-center">
                                 <div class="item-polyci d-flex align-items-center">
-                                    <img src="./images/gio.png" alt="">
+                                    <img src="{{asset('images/gio.png')}}" alt="">
                                     <div class="">
                                         <a href="">Giờ làm việc</a>
                                         <p>T2 - T7 Giờ hành chính</p>
@@ -339,8 +337,8 @@
         </div>
    </section>
 
-   <script src="{{ mix('js/app.js') }}"></script>
-   <script src="{{ mix('js/script.js') }}"></script>
+   <script src="{{ asset('js/app.js') }}"></script>
+   <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

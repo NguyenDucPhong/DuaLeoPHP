@@ -14,7 +14,7 @@ class CustomerController extends Controller
     {
         $data = Customer::latest()->search()->paginate(8);
 
-        return view('customer', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin.customer', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
     
     }
 
@@ -65,7 +65,7 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        return view('editCustomer', compact('customer'));
+        return view('admin.editCustomer', compact('customer'));
     }
 
     /**

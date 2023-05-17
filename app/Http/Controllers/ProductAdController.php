@@ -14,7 +14,7 @@ class ProductAdController extends Controller
     {
         $data = Product::latest()->paginate(8);
 
-        return view('product', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin.product', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -74,7 +74,7 @@ class ProductAdController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('editProduct', compact('product'));
+        return view('admin.editProduct', compact('product'));
     }
 
     /**

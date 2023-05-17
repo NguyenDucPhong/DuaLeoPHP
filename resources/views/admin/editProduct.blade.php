@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('admin.master')
 @if($errors->any())
 
 <div class="alert alert-danger">
@@ -13,6 +13,7 @@
 
 @endif
 @section('content2')
+{{dd($product)}}
     <div class="container">
         <div style="color: #80BB35; text-align: center">
             <h2>Edit Product</h2>

@@ -1,4 +1,4 @@
-@extends('admin');
+@extends('admin.master')
 
 @section('content2')
 @if($errors->any())

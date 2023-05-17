@@ -66,7 +66,7 @@
                       </div>
                       <div class="form-group">
                         <label for="password">Mật khẩu</label>
-                        <input type="" class="form-control" name="password">
+                        <input type="password" class="form-control" name="password">
                       </div>
                         <div class="mt-4 text-center ">
                             <button type="submit" class="login btn btn-success">Đăng nhập</button>

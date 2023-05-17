@@ -1,20 +1,5 @@
-@extends('admin');
-
+@extends('admin.master')
 @section('content2')
-
-@if($errors->any())
-
-<div class="alert alert-danger">
-    <ul>
-    @foreach($errors->all() as $error)
-
-        <li>{{ $error }}</li>
-
-    @endforeach
-    </ul>
-</div>
-
-@endif
 <header id="main-header" class="py-2">
     <div class="container">
       <div class="row">
@@ -96,8 +81,7 @@
       </div>
     </div>
   </section>
-
-  <section>
+<section>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -109,30 +93,24 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Customer name</th>
-                  <th scope="col">Gender</th>
-                  <th scope="col">Adderss</th>
-                  <th scope="col">Phone number</th>
+                  <th scope="col">ID Customer</th>
+                  <th scope="col">total</th>
+                  <th scope="col">created at</th>
                   <th scope="col"></th>
 
                 </tr>
               </thead>
               <tbody>
-                  @if (count($data)>0)
-                      @foreach ($data as $row)
+                  @if (count($invoices)>0)
+                      @foreach ($invoices as $invoice)
                       <tr>
-                        <th scope="row">{{$row->id}}</th>  
-                        <td>{{$row->name}}</td>
-                        <td>{{$row->gender}}</td>
-                        <td>{{$row->address}}</td>
-                        <td>{{$row->phone}}</td>
+                        <th scope="row">{{$invoice->id}}</th>  
+                        <td>{{$invoice->id_customer}}</td>
+                        <td>{{$invoice->total}}</td>
+                        <td>{{$invoice->created_at}}</td>
                         <td>
-                          <form action="" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <a href="{{route('customers.edit', $row->id)}}"  class="btn btn-primary btn-sm">Edit</a>
-                            <input type="submit" class="btn btn-danger btn-sm" value="delete">
-                          </form>
+                            <a href="">Xem chi tiết</a>
+                            <a href="{{route('invoices.create')}}">Thêm hoá đơn</a>
                         </td>
 
                       </tr>
@@ -142,7 +120,7 @@
               </tbody>
               
             </table>
-            {!! $data->render('pagination::bootstrap-5') !!}
+            {!! $invoices->render('pagination::bootstrap-5') !!}
           </div>
         </div>
       </div>

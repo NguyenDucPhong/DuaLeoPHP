@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('admin.master')
 @if($errors->any())
 
 <div class="alert alert-danger">
