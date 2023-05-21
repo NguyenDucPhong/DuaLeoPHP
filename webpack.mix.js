@@ -5,14 +5,15 @@ mix.js('resources/js/app.js', 'public/js')
    // .scripts([
    //    'resourcess/js/app.js',
    // // 'resources/js/jquery-3.6.0.min.js',
-   // // 'resources/js/bootstrap.bundle.min.js',
    // // 'resources/js/owl.carousel.min.js',
    // // 'resources/js/script.js',
    // // 'resources/js/addtocart.js'
    // ], 'public/js/all.js')
    .scripts([
       'resources/js/admin/app.js',
-      'resources/js/bootstrap.bundle.min.js'
+      'resources/js/bootstrap.bundle.min.js',
+      'resources/js/guess.js',
+      'resources/js/pay.js',
   ],'public/js/admin.js')
    .styles([
       'resources/css/normalize.css',

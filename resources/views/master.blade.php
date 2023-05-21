@@ -117,8 +117,8 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-1 col-lg-2 icon-cart">
-                        <a class="btn btn-brand"  href="./cart.html"><i class='bx bxs-shopping-bag'></i> Giỏ hàng
-                           (<span>0</span>)</a>
+                        <a href="{{route('cart')}}" class="btn btn-brand"  ><i class='bx bxs-shopping-bag'></i> Giỏ hàng
+                            (<span>{{count((array) session('cart'))}}</span>)</a>
                     </div>
                    
                 </div>           
@@ -228,9 +228,9 @@
                 <div class="offcanvas-header">
                 <div class="form-group">
                     <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                        <a href="./login.html"><i class='bx bxs-user' ></i> Đăng nhập</a>
+                        <a href="{{route('login')}}"><i class='bx bxs-user' ></i> Đăng nhập</a>
                         <span> hoặc</span>
-                        <a href="./signUp.html"> đăng ký</a>
+                        <a href="{{route('register')}}"> đăng ký</a>
                       </h5>
                       <div class="input-group mt-3" style="width:350px">
                         <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"

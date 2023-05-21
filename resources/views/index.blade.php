@@ -117,7 +117,7 @@
                                                     </div>
                                                     <div class="over-lay"></div>
                                                     <div class="add text-center">
-                                                        <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
+                                                        <a href="{{route('add_to_cart', $row->id)}}" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
                                                         <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#taoqueen"><i class='bx bx-show'></i></a>
                                                     </div>
                                                 </div>
@@ -175,7 +175,7 @@
                                                 </div>
                                                 <div class="over-lay"></div>
                                                 <div class="add text-center">
-                                                    <a href="#" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
+                                                    <a href="{{route('add_to_cart', $row->id)}}" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
                                                     <a href="#" class="detail"  data-bs-toggle="modal" data-bs-target="#taoqueen"><i class='bx bx-show'></i></a>
                                                 </div>
                                             </div>
@@ -239,7 +239,7 @@
                                                         </div>
                                                         <div class="over-lay"></div>
                                                         <div class="add text-center">
-                                                            <a href="" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
+                                                            <a href="{{route('add_to_cart', $row->id)}}" class="add-cart"><i class='bx bxs-shopping-bag'></i></a>
                                                             <a href=""><i class='bx bx-show'></i></a>
                                                         </div>
                                                     </div>

@@ -24,9 +24,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    return view('test');
-});
 
 Route::get('/register', [RegisterController::class, 'show'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
@@ -35,10 +32,15 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::resource('guests',ProductController::class);
 
+Route::get('/cart', function(){
+    return view('cart');
+})->name('cart');
 
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('add_to_cart/{id}', [ProductController::class, 'addToCart'])->name('add_to_cart');
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('customers', CustomerController::class);

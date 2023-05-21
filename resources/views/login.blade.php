@@ -71,7 +71,7 @@
                         <div class="mt-4 text-center ">
                             <button type="submit" class="login btn btn-success">Đăng nhập</button>
     
-                             <a href="./signUp.html" class="sign-up btn btn-success">Đăng kí</a>
+                             <a href="{{route('register')}}" class="sign-up btn btn-success">Đăng kí</a>
                         </div>
                     </form>
                   </div>
